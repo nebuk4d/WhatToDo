@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="yCr-Kl-Pea" id="sgF-zn-quc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="WhatToDo" id="76b-Qh-8A5"/>
+                    <navigationItem key="navigationItem" title="WhatToDo" id="76b-Qh-8A5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="njT-Uf-f9o">
+                            <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="yCr-Kl-Pea" id="DmX-cF-oQx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyI-P6-wjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +51,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d53-9y-R8d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L2E-ML-hJo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.22107002286380295" green="0.57887004643937678" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
