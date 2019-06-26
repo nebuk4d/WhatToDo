@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CCA3A8F5578C89555E99D6B /* Pods_WhatToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16268B31978DC2FF6FA9DECA /* Pods_WhatToDo.framework */; };
 		FAC1BCF122BAABF9006EEBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BCF022BAABF9006EEBE1 /* AppDelegate.swift */; };
 		FAC1BCF322BAABF9006EEBE1 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BCF222BAABF9006EEBE1 /* TodoListViewController.swift */; };
 		FAC1BCF622BAABF9006EEBE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC1BCF422BAABF9006EEBE1 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16268B31978DC2FF6FA9DECA /* Pods_WhatToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F417FFE3D0506A9E20822AB /* Pods-WhatToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToDo.debug.xcconfig"; path = "Target Support Files/Pods-WhatToDo/Pods-WhatToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		71596568A23ECD1DFB5BFB11 /* Pods-WhatToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToDo.release.xcconfig"; path = "Target Support Files/Pods-WhatToDo/Pods-WhatToDo.release.xcconfig"; sourceTree = "<group>"; };
 		FAC1BCED22BAABF9006EEBE1 /* WhatToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC1BCF022BAABF9006EEBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC1BCF222BAABF9006EEBE1 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCA3A8F5578C89555E99D6B /* Pods_WhatToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		124278A44344A522B71AAB34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F417FFE3D0506A9E20822AB /* Pods-WhatToDo.debug.xcconfig */,
+				71596568A23ECD1DFB5BFB11 /* Pods-WhatToDo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92C8C310BDBC3425B9C5EAC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16268B31978DC2FF6FA9DECA /* Pods_WhatToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAC1BCE422BAABF9006EEBE1 = {
 			isa = PBXGroup;
 			children = (
 				FAC1BCEF22BAABF9006EEBE1 /* WhatToDo */,
 				FAC1BCEE22BAABF9006EEBE1 /* Products */,
+				124278A44344A522B71AAB34 /* Pods */,
+				92C8C310BDBC3425B9C5EAC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC1BCFF22BAABFA006EEBE1 /* Build configuration list for PBXNativeTarget "WhatToDo" */;
 			buildPhases = (
+				6A2E411E7011D20C705C7189 /* [CP] Check Pods Manifest.lock */,
 				FAC1BCE922BAABF9006EEBE1 /* Sources */,
 				FAC1BCEA22BAABF9006EEBE1 /* Frameworks */,
 				FAC1BCEB22BAABF9006EEBE1 /* Resources */,
+				D5A6AC7CA05530E02C9C6526 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A2E411E7011D20C705C7189 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A6AC7CA05530E02C9C6526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatToDo/Pods-WhatToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatToDo/Pods-WhatToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatToDo/Pods-WhatToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAC1BCE922BAABF9006EEBE1 /* Sources */ = {
@@ -320,6 +389,7 @@
 		};
 		FAC1BD0022BAABFA006EEBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F417FFE3D0506A9E20822AB /* Pods-WhatToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +408,7 @@
 		};
 		FAC1BD0122BAABFA006EEBE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71596568A23ECD1DFB5BFB11 /* Pods-WhatToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
